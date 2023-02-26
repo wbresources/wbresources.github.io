@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik&display=swap');
+.banner {
+margin: 0px;
+background-color: rgb(0, 153, 255);
+color: white;
+position: sticky;
+text-align:center;
+padding: 10px;
+}
+::selection {
+background:rgb(254, 123, 0)
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+background-size: cover;
+padding: 10px;
+text-align: center;
+background-color: rgb(240, 240, 240);
+background-repeat: no-repeat;
+}
+.classname {
+animation-name: example;
+animation-duration: 5s;
+}
+footer {
+background-color: rgba(255, 255, 255, 0.219);
+color: rgb(90, 90, 90);
+height: 155px;
+margin: 0%;
+font-family: 'Ubuntu', sans-serif;
+padding: 10px;
+text-align: center;
+border-top: 1px solid rgb(115, 115, 115);
+}
+.homebtn {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 100px;
+margin: 5px;
+margin-top: 15px;
+height: 34px;
+border: solid rgb(46, 46, 46) 1px;
+transition: transform 0.5s;
+text-align: center;
+font-size: 13px;
+background-color: white;
+color:black;
+cursor: crosshair;
+}
+.homebtn:hover {
+transform: scale(1.2);
+background-color: rgb(243, 243, 243);
+}
+.homebtn:active {
+transform: scale(1.2);
+background-color: rgb(182, 182, 182);
+}
+#copybtn {
+background-color:rgb(254, 123, 0);
+width:120px;
+color: white;
+transition: 0.5s;
+border-radius: 100px;
+}
+#copybtn:hover {
+background-color:rgb(0, 0, 0); 
+width:125px;
+}
+#copybtn:active {
+background-color:rgb(255, 255, 255); 
+width:125px;
+color: black;
+}
+.heading {
+text-align: center;
+color: rgb(0, 0, 0);
+border-bottom: 1px solid rgb(115, 115, 115);
+font-size: 20px;
+padding: 20px;
+}
+.okok {
+background-color: white;
+color:black;
+transition: 0.5s;
+}
+.okok:hover {
+background-color: black;
+color: white;
+}
+#geninput {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 100px;
+margin: 5px;
+margin-top: 15px;
+height: 34px;
+border: solid rgb(46, 46, 46) 1px;
+transition: transform 0.5s;
+text-align: center;
+font-size: 13px;
+background-color: white;
+color:black;
+cursor: crosshair;
+width: 60px;}
+#geninput:hover {
+transform: scale(1.2);
+background-color: rgb(243, 243, 243);
+}
+#geninput:active {
+transform: scale(1.2);
+background-color: rgb(182, 182, 182);
+}
+#gradeinput {
+width: 55px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 100px;
+margin: 5px;
+margin-top: 15px;
+height: 31px;
+border: solid rgb(46, 46, 46) 1px;
+transition: transform 0.5s;
+text-align: center;
+font-size: 13px;
+background-color: white;
+color:black;
+cursor: crosshair;
+
+
+}
+#gradeinput:hover {
+transform: scale(1.2);
+background-color: rgb(243, 243, 243);
+}
+#gradeinput:active {
+transform: scale(1.2);
+background-color: rgb(182, 182, 182);
+}
+#mydate {
+
+width: 130px;
+
+
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 100px;
+margin: 5px;
+margin-top: 15px;
+height: 33px;
+border: solid rgb(46, 46, 46) 1px;
+transition: transform 0.5s;
+text-align: center;
+font-size: 13px;
+background-color: white;
+color:black;
+cursor: crosshair;
+
+}
+#mydate:hover {
+transform: scale(1.2);
+background-color: rgb(243, 243, 243);
+}
+#mydate:active {
+transform: scale(1.2);
+background-color: rgb(182, 182, 182);
+}
+h1,h2,h3 {font-family: 'Fredoka One', cursive;}
+.word1 {
+color:black;
+transition: 0.5s;    
+}
+.word1:hover {color: rgb(205, 0, 0);}
+.word2 {color:black;
+transition: 0.5s;}
+.word2:hover {color: rgb(37, 180, 1);
+}
+.word3 {color:black;
+transition: 0.5s;}
+.word3:hover {color: rgb(0, 103, 205);}
+p{font-family: 'Rubik', sans-serif;}
+.shadow{
+transition: 0.5s;
+border-radius: 40px;
+}
+.shadow:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.logo {
+margin: 10px;
+}
+.oldup {
+color: gray;
+font-family: 'Courier New', Courier, monospace;
+}
+.hide {
+    text-align: left;
+display: none;
+transition: 5s;
+color: gray;
+font-family: 'Courier New', Courier, monospace;
+}
+
+.hoverhere:hover + .hide{
+    text-align: left;
+display: block;
+color: gray;
+font-family: 'Courier New', Courier, monospace;
+transition: 5s;
+}
+.hoverhere {
+    text-align: left;
+text-decoration: underline;
+color: black;
+font-family: 'Courier New', Courier, monospace;
+transition: 5s;
+} 
+
+
+.newup {
+color: black;
+font-family: 'Courier New', Courier, monospace;
+}
+.backhome { 
+background-color: rgb(254, 123, 0);
+color: black;
+padding: 10px 15px;
+border-radius: 100px; 
+text-decoration: none;
+margin: 30px; 
+font-family: sans-serif;
+}
+.alert {
+background-color: rgba(255, 102, 0, 0.705);
+font-size: 20px;
+border-radius: 100px; 
+padding: 10px 20px;
+}
+a {
+    text-decoration: none;
+}
+
+#dpp{
+    
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    border-top-left-radius: 100px !important; 
+    border-bottom-left-radius: 100px !important; 
+    border-top-right-radius: 0px !important; 
+    border-bottom-right-radius: 0px !important; 
+    margin-right: -1.75px !important;
+    margin-top: 15px;
+    height: 34px;
+    border-right: .5px solid black !important;
+    border: solid rgb(46, 46, 46) 1px;
+    transition: transform 0.5s;
+    text-align: center;
+    font-size: 13px;
+    background-color: white;
+    color:black;
+    cursor: crosshair;
+    
+}
+
+#dpa{
+    
+    box-shadow: 0 0px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border-top-right-radius: 100px !important; 
+    border-bottom-right-radius: 100px !important; 
+    border-top-left-radius: 0px !important; 
+    border-bottom-left-radius: 0px !important; 
+    margin-left: -1.75px !important;
+    margin-top: 15px;
+    height: 34px;
+    border-left: .5px solid black !important;
+    border: solid rgb(46, 46, 46) 1px;
+    transition: transform 0.5s;
+    text-align: center;
+    font-size: 13px;
+    background-color: white;
+    color:black;
+    cursor: crosshair;
+    
+}
