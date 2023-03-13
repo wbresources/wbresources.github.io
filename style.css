@@ -59,20 +59,20 @@ background-color: #171717;
 color: white;
 }
 .copybtn {
-background-color:rgb(254, 123, 0);
-width:120px;
-color: white;
-transition: 0.5s;
-border-radius: 100px;
+background-color:rgb(254, 123, 0) !important;
+width:120px !important;
+color: white !important;
+transition: 0.5s !important;
+border-radius: 100px !important; 
 }
 ..copybtn:hover {
-background-color:rgb(0, 0, 0); 
-width:125px;
+background-color:rgb(0, 0, 0) !important; 
+width:125px !important;
 }
 .copybtn:active {
-background-color:rgb(255, 255, 255); 
-width:125px;
-color: black;
+background-color:rgb(255, 255, 255) !important; 
+width:125px !important;
+color: black !important;
 }
 
 
