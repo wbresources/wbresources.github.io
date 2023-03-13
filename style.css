@@ -136,7 +136,9 @@ transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
 cursor: crosshair;
-width: 60px;}
+width: 60px;
+background-color: #171717 !important;
+color: white !important;}
 #geninput:hover {
 transform: scale(1.2);
 background-color: #171717 !important;
@@ -295,8 +297,8 @@ a {
     transition: transform 0.5s;
     text-align: center;
     font-size: 13px;
-    background-color: white;
-    color:black;
+   background-color: #171717 !important;
+color: white !important;
     cursor: crosshair;
     
 }
@@ -316,8 +318,8 @@ a {
     transition: transform 0.5s;
     text-align: center;
     font-size: 13px;
-    background-color: white;
-    color:black;
+background-color: #171717 !important;
+color: white !important;
     cursor: crosshair;
     
 }
