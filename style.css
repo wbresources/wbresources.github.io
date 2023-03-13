@@ -44,8 +44,8 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: white;
-color:black;
+background-color: #171717;
+color: white;
 cursor: crosshair;
 }
 .homebtn:hover {
