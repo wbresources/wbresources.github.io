@@ -65,7 +65,7 @@ color: white !important;
 transition: 0.5s !important;
 border-radius: 100px !important; 
 }
-..copybtn:hover {
+.copybtn:hover {
 background-color:rgb(0, 0, 0) !important; 
 width:125px !important;
 }
@@ -139,13 +139,13 @@ cursor: crosshair;
 width: 60px;}
 #geninput:hover {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 #geninput:active {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 #gradeinput {
 width: 55px;
@@ -158,21 +158,21 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 cursor: crosshair;
 
 
 }
 #gradeinput:hover {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 #gradeinput:active {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 #mydate {
 
@@ -189,20 +189,20 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 cursor: crosshair;
 
 }
 #mydate:hover {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 #mydate:active {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: #171717 !important;
+color: white !important;
 }
 h1,h2,h3 {font-family: 'Fredoka One', cursive;}
 .word1 {
