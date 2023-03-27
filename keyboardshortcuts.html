@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+   <head>
+           <meta charset="utf-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Eisa S.">
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="icon" type="image/png" href="images/favicon.png">
+      <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik&display=swap" rel="stylesheet">
+      <title>WB Label Generator -- Keyboard Shortcuts</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" type="image/png" href="images/favicon.png">
+   </head>
+   <body>
+      <br><br>
+      <a class="backhome" href="index.html">&#8592; Back home</a>
+      <br><br>
+      <h2>WB Label Generator -- Keyboard Shortcuts</h2>
+      <br>
+
+      <p style="text-align: left;">
+         Here is a list of keyboard shortcuts that you can use on this website to make generating/copying labels much faster:
+      <ul style="text-align: left; font-family: sans-serif;">
+        <br>
+         <b>Label Shortcuts</b><br><br>
+         <li>{ ENTER } - Copy label</li>
+         <br>
+         <li>{ D } - Copy a normal/digital Daily Planner label with today's date for whatever grade and gender you selected</li>
+         <br>
+         <li>{ C } - Change type to CW and copy label</li>
+         <br>
+         <li>{ H } - Change type to HW and copy label</li>
+         <br><br>
+         <b>Theme Shortcuts</b><br><br>
+         <li>{ 1 } - Change the theme to <span class="material-icons md-24" onclick="wbtheme();">home</span></li>
+         <br>
+         <li>{ 2 } - Change the theme to <span class="material-icons md-24" onclick="lighttheme();">light_mode</span></li>
+         <br>
+         <li>{ 3 } - Change the theme to <span class="material-icons md-24" onclick="spacetheme();">rocket_launch</span></li>
+         <br>
+         <li>{ 4 } - Change the theme to <span class="material-icons md-24" onclick="pinktheme();">local_florist</span></li>
+         <br>
+         <li>{ 5 } - Change the theme to <span class="material-icons md-24" onclick="cartheme();">directions_car</span></li>
+         <br>
+      </ul>
+      </p>
+   </body>
+   <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+   <!--<script>
+      var sketchProc = function(processingInstance) {
+       with (processingInstance) {
+          size(500, 400);
+          frameRate(30);
+      
+          var home = function() {
+              background(255);
+              
+              fill(0);
+      
+              rectMode(CENTER);
+              rect(width/2, height/2, 400, 200, 10);
+      
+              textAlign(CENTER);
+      
+              var key = function(x, y, txt, w) {
+                  textSize(11);
+                  fill(0);
+                  stroke(255);
+                  strokeWeight(1);
+                  rect(x, y, w, 20);
+                  fill(255);
+                  text(txt, x, y+5);
+              };
+      
+              
+              var topkeys = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "", "", ""]
+              var middlekeys = ["", "A", "S", "D", "F", "G", "H", "J", "K", "L"];
+              var bottomkeys = ["", "", "Z", "X", "C", "V", "B", "N", "M", "", "", "", ""];
+      
+              for(var i=0; i<10; i++) {
+                key(i*25+80, 130, i, 20);
+              }
+              
+              for (var i=10; i<14; i++) {
+                key(i*25+80, 130, "", 20);
+              }
+      
+              for(var i=0; i<topkeys.length; i++) {
+                key(i*25+80, 160, topkeys[i], 20);
+              }
+      
+              for(var i=0; i<middlekeys.length; i++) {
+                key(i*25+80, 190, middlekeys[i], 20);
+              }
+      
+              for(var i=0; i<bottomkeys.length; i++) {
+                key(i*25+80, 220, bottomkeys[i], 20);
+              }
+      
+              key(width/2, 270, "SPACE", 180);
+              key(360, 190, "ENTER", 60);
+              key(410, 160, "", 20);
+              key(410, 190, "", 20);
+              key(410, 220, "", 20);
+      
+        };
+      
+        var theshortcut = function(txt) {
+          fill(255, 255, 255, 210);
+          noStroke();
+          rect(0, 0, 1000, 1000);
+          fill(0);
+          textAlign(CENTER);
+          textSize(20);
+          text(txt, width/2-150, height/2, 250, 1000);
+        };
+      
+        draw = function() {
+          home();
+          fill(255);
+          //text(mouseX+" "+mouseY, mouseX, mouseY);
+      
+          if (mouseX>219 && mouseY>176 && mouseX<241 && mouseY<197) {
+            theshortcut("Change type to HW and copy label");
+          }
+      
+          else if (mouseX>166 && mouseY>205 && mouseX<192 && mouseY<229) {
+            theshortcut("Change type to CW and copy label");
+          }
+      
+          else if (mouseX>322 && mouseY>176 && mouseX<394 && mouseY<197) {
+            theshortcut("Copy label");
+          }
+      
+          else if (mouseX>143 && mouseY>176 && mouseX<163 && mouseY<197) {
+            theshortcut("Copy DP for today (with selected grade and gender)");
+          }
+        }
+      
+        
+      
+      
+      }};
+      
+      var canvas = document.getElementById("mycanvas");
+      var processingInstance = new Processing(canvas, sketchProc);
+      </script>-->
+</html>
