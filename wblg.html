@@ -1,24 +1,22 @@
-
 <!DOCTYPE html>
 <html>
    <head>
       <meta charset="utf-8">
       <title>WB Label Generator</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="Eisa S.">
-      <link rel="stylesheet" href="style.css">
+      <meta name="author" content="Umar">
+      <link rel="stylesheet" href="wblg.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="icon" type="image/png" href="images/favicon.png">
       <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik&display=swap" rel="stylesheet">
    </head>
-   <body onclick="update();" vertical-align: middle;>
-      <p style= "position: fixed; text-align: left;" class="alert">
-         Alert: <a href="updates.html">MAJOR UPDATES</a>
-      </p>
+   <body onclick="update();" style="vertical-align: middle;">
+
+
       <div class="heading">
-         <img class="logo" src="images/logo.png" style="width: 110px; vertical-align: middle;">
+         <img class="logo" src="images/logo.png" alt="logo" style="width: 110px; vertical-align: middle;">
          <h2 style="display: inline-block; vertical-align: middle;">
             <span class="word1">
             <u>WB</u>
@@ -30,28 +28,20 @@
          </h2>
       </div>
       <br>
-      <div class="themeicons">
-         <span class="material-icons md-24" onclick="wbtheme();">home</span>
-         <span class="material-icons md-24" onclick="lighttheme();">light_mode</span>
-         <span class="material-icons md-24" onclick="spacetheme();">rocket_launch</span>
-         <span class="material-icons md-24" onclick="pinktheme();">local_florist</span>
-         <span class="material-icons md-24" onclick="cartheme();">directions_car</span>
-      </div>
-      <br>
-      <div class="shadow">
-         <div class="shadow" id="HWCWselect">
+      <div>
+         
             <h2 class="word3">Type:</h2>
-            <a href="#duedateselect">
-            <button style="width: 100px;"  class="homebtn" onclick="worksel('CW');">CW</button>
-            <button style="width: 100px;" class="homebtn" onclick="worksel('HW');">HW</button><br>
-            <button style="width: 100px;" class="homebtn" onclick="subsel('DP');">DP</button>
+            <a href="#duedateselect"></a>
+            <div    id="HWCWselect">
+         <button style="width: 100px;"  class="homebtn" onclick="worksel('CW');">CW</button>
+         <button style="width: 100px;" class="homebtn" onclick="worksel('HW');">HW</button><br>
+         <button style="width: 100px;" class="homebtn" onclick="subsel('DP');">DP</button>
+         <button style="width: 50px;" class="homebtn" id="dpp" onclick="subsel('DP(P)');">DP(P)</button>
+         <button style="width: 50px;" class="homebtn" id="dpa" onclick="subsel('DP(A)');">DP(A)</button>
             
-            <button style="width: 50px;" class="homebtn" id="dpp" onclick="subsel('DP(P)');">DP(P)</button>
-            <button style="width: 50px;" class="homebtn" id="dpa" onclick="subsel('DP(A)');">DP(A)</button>
-            </a>
          </div>
          <br>
-         <div class="shadow">
+         <div   >
             <h2 class="word2">Grade:</h2>
             <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="10" placeholder="#" id="gradeinput" onclick="normalgrade()"class="homebtn" >
           
@@ -59,15 +49,15 @@
                <option value="B">Boys</option>
                <option value="G">Girls</option>
             </select>
-            <p style="transition: .5s;" color: rgb(180, 180, 180);"> Or, if required, select by level</p>
+            <p style="transition: .5s; color: rgb(180, 180, 180);"> Or, if required, select by level</p>
             <button style="width: 75px;" onclick="lv0();" class="homebtn" >Level 0</button>
             <button style="width: 75px;" onclick="lv1();" class="homebtn" >Level 1</button>
             <button style="width: 75px;" onclick="lv2();" class="homebtn" >Level 2</button>
             <button style="width: 75px;" onclick="lv3();" class="homebtn" >Level 3</button>
          </div>
          <br>
-         <div class="shadow">
-            <h2>Subject</h2>
+         <div   >
+            <h2 class="word3">Subject:</h2>
             <a href="#HWCWselect">
             <button style="width: 85px;" class="homebtn" onclick="subsel('MAT');">Math</button>
             <button style="width: 85px;" class="homebtn" onclick="subsel('ENG');">English</button>
@@ -85,9 +75,9 @@
             <br>
          </div>
 
-         <div class="shadow" id="duedateselect">
+         <div    id="duedateselect">
             <h2 class="word1">Due date:</h2>
-            <p style="color: rgb(180, 180, 180);">(set to today's date by default)</p>
+            <!--p style="color: rgb(180, 180, 180);">(set to today's date by default)</p -->
             <button class="homebtn" style="width: 85px;" onclick="setdate='today'">Today</button>
             <button class="homebtn" style="width: 85px;" onclick="setdate='tomorrow';">Tomorrow</button>
             <input type="date" id="mydate" placeholder="custom" onclick="setdate='custom';" class="homebtn" >
@@ -97,12 +87,12 @@
       </div>
       <br>
       <br>
-      <div class="shadow" style="background:rgba(105, 105, 105, .5); border-radius:10px; padding:5px;">
-         <h2 class="word3">Your label:</h2>
+      <div    style="background-color: rgba(255, 119, 0, 0.119); border-radius:100px; padding:5px;">
+        
          <h2 id="main">
             <span class="okok">Error, please reload page</span>
          </h2>
-         <button id="copybtn" style="width: 150px" class="homebtn" onclick="copytxt();">Copy text</button>
+         <button id="copybtn" style="width: 150px" class="homebtn" onclick="copytxt();">Copy label</button>
           <br>
       <br>
      
@@ -261,8 +251,7 @@
          }
          updateVisitCount();
       </script>
-      <script>
-         //All the theme stuff here, you may do what you want with it:
+      <!-- <script> //All the theme stuff here, you may do what you want with it:
          var h2Elements = document.getElementsByTagName("h2");
          var pElements = document.getElementsByTagName("p");
          var spanElements = document.getElementsByTagName("span");
@@ -350,6 +339,8 @@
                homebtns[i].style.boxShadow = "0 0px 20px 0  gray";
             }
          }
+      </script>
+         <script>
          //Here is your WB theme
          function wbtheme() {
             //Put background image link into: url('LINK HERE') :
@@ -368,7 +359,8 @@
             for (var i = 0; i < homebtns.length; i++) {
                homebtns[i].style.boxShadow = "0 0px 20px 0  white";
                }
-         }
+         }-->
+         <script>
          addEventListener('keypress', (event) => {});
          onkeypress = (event) => {
             if (event.key === "Enter") {
@@ -394,8 +386,7 @@
                cartheme();
             }
          };
-         wbtheme();
-         wbtheme();
+         
       </script>
    </body>
 </html>
