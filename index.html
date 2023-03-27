@@ -2,305 +2,75 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <title>WB Resources</title>
+      <title>Workbench Resources</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="author" content="Umar Habib">
-      <link rel="stylesheet" href="style.css">
+      <meta name="author" content="Umar">
+      <link rel="stylesheet" href="wbr.css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="icon" type="image/png" href="images/wbrlogo.png">
       <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik&display=swap" rel="stylesheet">
    </head>
-   <body onclick="update();">
-    
+   <body onclick="update();" vertical-align: middle;>
+ 
       <div class="heading">
          <img class="logo" src="images/wbrlogo.png" style="width: 110px; vertical-align: middle;">
          <h2 style="display: inline-block; vertical-align: middle;">
             <span class="word1">
-            <u>WB</u>
+            <u>W</u>orkbench
             </span>
             <span class="word2">
-                <u>R</u>escources</span>
+            <u>R</u>escources </span>
+            
          </h2>
       </div>
-        <br>
-      <br> 
-        <a href="wblg.html">
-      <button class="homebtn" id="bigbtn">Label Generator</button>
-      </a>
-           <br>
-      <br> 
-       <a href="tt.html">
-      <button class="homebtn" id="bigbtn">Timetables(under construction)</button>
-      </a>
       <br>
- <br>
-      <br>
-      
-   
+      <div class="shadow">
+         <div class="shadow" id="HWCWselect">
+            <h2 class="word3">Tools</h2>
+            <a href="tt.html">
+               <button class="btns">Workbench Label Generator</button>
+               </a>
+               <br>  
+               <br> 
+               <h2 class="word3">Files</h2>
+            <a href="wblg.html">
+               <button class="btns">Workbench Timetables</button>
+               </a>
+      <br>  
+      <br> 
+
+      <br> <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+      <br> 
+
+      <br> 
+      <br> 
+      <br> 
+      <br> <br> 
+
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
       <footer>
-      <a href="review.html">
-      <button class="homebtn" style="background-image: linear-gradient(-45deg, rgb(255, 0, 0) 0%, rgb(0, 0, 255) 100%); color: white"> Leave me a review </button>
-      </a>
-      <a href="credits.html">
-      <button class="homebtn" style="background-image: linear-gradient(-45deg, rgb(0, 0, 255) 0%, rgb(0, 255, 0) 100%); color: white"> See credits </button>
-         </a>
-      </a>
-      <br>
-      <br>
          <br>
-         <p>Made for Workbench Academy</p>
+    
+      <br>
+      <br>
+    
          <p>By Umar Habib - WBResources</p>
+         
          <br>
       </footer>
-      <script src="confetti.js"></script>
-      <script>
-         var setdate = "";
-         //JS for the confetti, ignore this.
-         const start = () => {
-            setTimeout(function() {
-               confetti.start()
-            }, 500); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
-         };
-         //  for stopping the confetti 
-         const stop = () => {
-            setTimeout(function() {
-               confetti.stop()
-            }, 2000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
-         };
-         var today = new Date();
-         var dd = String(today.getDate()).padStart(2, '0');
-         var mm = String(today.getMonth() + 1).padStart(2, '0');
-         var yyyy = today.getFullYear();
-         var date1;
-         
-         function todaydate() {
-            date = today;
-            update();
-         }
-         today = dd + '-' + mm + '-' + yyyy;
-         var sub = "MAT";
-         var work = "CW";
-         var grade = document.getElementById('gradeinput').value;
-         //var date = document.getElementById('mydate').value;
-         var date = today;
-         var txt = work + " G" + grade + document.getElementById('geninput').value + " " + sub + " " + date;
-         
-         function normalgrade() {
-            grade = document.getElementById('gradeinput').value
-         }
-         
-         function lv0() {
-            grade = "LV0"
-         };
-         
-         function lv1() {
-            grade = "LV1"
-         };
-         
-         function lv2() {
-            grade = "LV2"
-         };
-         
-         function lv3() {
-            grade = "LV3";
-         };
-         var tomorrow = new Date();
-         tomorrow.setDate(tomorrow.getDate() + 1);
-         var dd1 = String(tomorrow.getDate()).padStart(2, '0');
-         var mm1 = String(tomorrow.getMonth() + 1).padStart(2, '0');
-         var yyyy1 = tomorrow.getFullYear();
-         tomorrow1 = dd1 + '-' + mm1 + '-' + yyyy1;
-         
-         function update() {
-            if (sub === "DP(P)" || sub === "DP(A)" || sub === "DP") {
-               txt = sub + " G" + grade + document.getElementById('geninput').value + " FOR " + date;
-            } else {
-               txt = work + " G" + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
-            }
-            if (setdate === "today") {
-               date = today;
-            } else if (setdate === "tomorrow") {
-               date = tomorrow1;
-            } else if (setdate === "custom") {
-               if (document.getElementById('mydate').value === "") {
-                  date = "INPUT DATE";
-               } else {
-                  date1 = document.getElementById('mydate').value
-                  const date2 = date1.split("-");
-                  date = date2[2] + "-" + date2[1] + "-" + date2[0];
-               }
-            }
-            document.getElementById('main').innerHTML = txt;
-         };
-         
-         function subsel(subselect) {
-            sub = subselect;
-            update();
-         }
-         
-         function worksel(workselect) {
-            work = workselect;
-            update();
-         }
-         
-         function copytxt() {
-            update();
-            update();
-            update();
-            update();
-            navigator.clipboard.writeText(txt);
-            fetch('https://api.countapi.xyz/update/submityourwork/syw/?amount=1').then(res => res.json()).then(res => {
-               countEl.innerHTML = res.value;
-            });
-            start();
-            stop();
-            document.body.className = 'classname';
-            if (sub === "DP(P)" && date === today) {
-               alert("Are you sure that the date is correct? \n \nIf the planner is *planned* for tomorrow, then the due date would be tomorrow's date. \nFor example if you submit a planner on 13 Oct for the day after, the due date would be 14 Oct. \n\nText has been copied anyways.");
-            }
-         }
-         update();
-         var intervalId = window.setInterval(function() {
-            update();
-         }, 50);
-         document.getElementById("formsdiv").style.display = "none";
-         
-         function myFunction() {
-            document.getElementById("formsdiv").style.display = "block";
-         }
-      </script>
-      <script>
-         //Shows how many times the button has been clicked -- DON'T MESS WITH THIS
-         const countEl = document.getElementById('count');
-         
-         function updateVisitCount() {
-            fetch('https://api.countapi.xyz/get/submityourwork/syw').then(res => res.json()).then(res => {
-               countEl.innerHTML = res.value;
-            });
-         }
-         updateVisitCount();
-      </script>
-      <script>
-         //All the theme stuff here, you may do what you want with it:
-         var h2Elements = document.getElementsByTagName("h2");
-         var pElements = document.getElementsByTagName("p");
-         var spanElements = document.getElementsByTagName("span");
-         
-         function lighttheme() {
-            document.body.style.background = "rgb(240, 240, 240)";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "black";
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "black";
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "black";
-            }
-         }
-         
-         function darktheme() {
-            document.body.style.background = "rgb(0, 0, 0)";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "white";
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "white";
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "white";
-            }
-         }
-         
-         function spacetheme() {
-            document.body.style.background = "url('https://wallpapershome.com/images/pages/pic_h/2631.jpg')";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "cover";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "white";
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "white";
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "white";
-            }
-         }
-         
-         function pinktheme() {
-            document.body.style.background = "url('https://wallpapershome.com/images/pages/pic_h/23723.jpg')";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "cover";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "rgb(0, 0, 0)";
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "rgb(0, 0, 0)";
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "rgb(0, 0, 0)";
-            }
-         }
-         
-         function cartheme() {
-            document.body.style.background = "url('https://wallpaperaccess.com/full/48832.jpg')";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "cover";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "black";
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "black";
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "black";
-            }
-         }
-         //Here is your WB theme
-         function wbtheme() {
-            //Put background image link into: url('LINK HERE') :
-            document.body.style.background = "rgb(0, 0, 0)";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundSize = "cover";
-            for (var i = 0; i < h2Elements.length; i++) {
-               h2Elements[i].style.color = "rgb(254, 123, 0)"; //Title color
-            }
-            for (var i = 0; i < pElements.length; i++) {
-               pElements[i].style.color = "white"; //Normal text color
-            }
-            for (var i = 0; i < spanElements.length; i++) {
-               spanElements[i].style.color = "white"; //Span color, better set it as the same color as the text color
-            }
-         }
-         addEventListener('keypress', (event) => {});
-         onkeypress = (event) => {
-            if (event.key === "Enter") {
-               copytxt();
-            } else if (event.key === "c" || event.key === "C") {
-               worksel('CW');
-               copytxt();
-            } else if (event.key === "h" || event.key === "H") {
-               worksel('HW');
-               copytxt();
-            } else if (event.key === "d" || event.key === "D") {
-               subsel('DP');
-               copytxt();
-            } else if (event.key === "w" || event.key === "W" || event.key === "2") {
-               lighttheme();
-            } else if (event.key === "b" || event.key === "B" || event.key === "1") {
-               wbtheme();
-            } else if (event.key === "p" || event.key === "P" || event.key === "4") {
-               pinktheme();
-            } else if (event.key === "r" || event.key === "R" || event.key === "3") {
-               spacetheme();
-            } else if (event.key === "c" || event.key === "C" || event.key === "5") {
-               cartheme();
-            }
-         };
-         wbtheme();
-         wbtheme();
-      </script>
-   </body>
-</html>
