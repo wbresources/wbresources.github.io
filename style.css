@@ -16,9 +16,10 @@ scroll-behavior: smooth;
 body {
 background-size: cover;
 padding: 10px;
-text-align: center;
+text-align: center !important;
 background-color: rgb(240, 240, 240);
 background-repeat: no-repeat;
+cursor:crosshair;
 }
 .classname {
 animation-name: example;
@@ -27,88 +28,57 @@ animation-duration: 5s;
 footer {
 background-color: rgba(255, 255, 255, 0.219);
 color: rgb(90, 90, 90);
-height: 155px;
+height: 200px;
 margin: 0%;
 font-family: 'Ubuntu', sans-serif;
 padding: 10px;
 text-align: center;
-border-top: 1px solid rgb(115, 115, 115);
+
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
 }
 .homebtn {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+box-shadow: 0 6px 20px 0 rgba(255, 255, 255, 0.356), 0 6px 20px 0 rgba(255, 255, 255, 0.445);
 border-radius: 100px;
-margin: 5px;
+margin: 8px;
 margin-top: 15px;
 height: 34px;
 border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: #171717;
-color: white;
+background-color: white;
+color:black;
 cursor: crosshair;
 }
 .homebtn:hover {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: rgb(243, 243, 243);
 }
 .homebtn:active {
 transform: scale(1.2);
-background-color: #171717;
-color: white;
+background-color: rgb(182, 182, 182);
 }
-.copybtn {
-background-color:rgb(254, 123, 0) !important;
-width:120px !important;
-color: white !important;
-transition: 0.5s !important;
-border-radius: 100px !important; 
-}
-.copybtn:hover {
-background-color:rgb(0, 0, 0) !important; 
-width:125px !important;
-}
-.copybtn:active {
-background-color:rgb(255, 255, 255) !important; 
-width:125px !important;
-color: black !important;
-}
+#copybtn {
+    box-shadow: 0 0px 12px 4px rgba(255, 136, 0, 0.527), 0 6px 20px 0 rgba(255, 145, 0, 0.445) !important;
 
-
-
-
-
-
-#bigbtn {
 background-color:rgb(254, 123, 0);
-width: 500px;
-height: 50px;
+width:120px;
 color: white;
 transition: 0.5s;
 border-radius: 100px;
-font-size: 15pt;
 }
-#bigbtn:hover {
+#copybtn:hover {
+       box-shadow: 0 0px 12px 4px rgb(59, 59, 59), 0 6px 20px 0 rgba(107, 107, 107, 0.445) !important;
 background-color:rgb(0, 0, 0); 
-width: 505px;
-height: 52px;
-font-size: 17pt;
+width:125px;
 }
-#bigbtn:active {
+#copybtn:active {
+       box-shadow: 0 0px 12px 4px rgba(255, 255, 255, 0.527), 0 6px 20px 0 rgba(255, 255, 255, 0.445) !important;
 background-color:rgb(255, 255, 255); 
-font-size: 19pt;
+width:125px;
 color: black;
-width: 510px;
-height: 52px;
 }
-
-
-
-
-
-
-
 .heading {
 text-align: center;
 color: rgb(0, 0, 0);
@@ -135,19 +105,17 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
+background-color: white;
+color:black;
 cursor: crosshair;
-width: 60px;
-background-color: #171717 !important;
-color: white !important;}
+width: 60px;}
 #geninput:hover {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(243, 243, 243);
 }
 #geninput:active {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(182, 182, 182);
 }
 #gradeinput {
 width: 55px;
@@ -160,21 +128,19 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: #171717 !important;
-color: white !important;
+background-color: white;
+color:black;
 cursor: crosshair;
 
 
 }
 #gradeinput:hover {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(243, 243, 243);
 }
 #gradeinput:active {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(182, 182, 182);
 }
 #mydate {
 
@@ -191,20 +157,18 @@ border: solid rgb(46, 46, 46) 1px;
 transition: transform 0.5s;
 text-align: center;
 font-size: 13px;
-background-color: #171717 !important;
-color: white !important;
+background-color: white;
+color:black;
 cursor: crosshair;
 
 }
 #mydate:hover {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(243, 243, 243);
 }
 #mydate:active {
 transform: scale(1.2);
-background-color: #171717 !important;
-color: white !important;
+background-color: rgb(182, 182, 182);
 }
 h1,h2,h3 {font-family: 'Fredoka One', cursive;}
 .word1 {
@@ -224,9 +188,7 @@ p{font-family: 'Rubik', sans-serif;}
 transition: 0.5s;
 border-radius: 40px;
 }
-.shadow:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 .logo {
 margin: 10px;
 }
@@ -251,7 +213,7 @@ transition: 5s;
 }
 .hoverhere {
     text-align: left;
-text-decoration: underline;
+text-decoration: none;
 color: black;
 font-family: 'Courier New', Courier, monospace;
 transition: 5s;
@@ -272,7 +234,7 @@ margin: 30px;
 font-family: sans-serif;
 }
 .alert {
-background-color: rgba(255, 102, 0, 0.705);
+background-color: rgba(255, 123, 0, 0.678);
 font-size: 20px;
 border-radius: 100px; 
 padding: 10px 20px;
@@ -283,13 +245,13 @@ a {
 
 #dpp{
     
-    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
+    clip-path: inset(-30px -0px -30px -30px);
     border-top-left-radius: 100px !important; 
     border-bottom-left-radius: 100px !important; 
     border-top-right-radius: 0px !important; 
     border-bottom-right-radius: 0px !important; 
-    margin-right: -1.75px !important;
+    margin-right: -2px !important;
     margin-top: 15px;
     height: 34px;
     border-right: .5px solid black !important;
@@ -297,20 +259,21 @@ a {
     transition: transform 0.5s;
     text-align: center;
     font-size: 13px;
-   background-color: #171717 !important;
-color: white !important;
+    background-color: white;
+    color:black;
     cursor: crosshair;
     
 }
 
 #dpa{
     
-    box-shadow: 0 0px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+    clip-path: inset(-30px -30px -30px -0px);
      border-top-right-radius: 100px !important; 
     border-bottom-right-radius: 100px !important; 
     border-top-left-radius: 0px !important; 
     border-bottom-left-radius: 0px !important; 
-    margin-left: -1.75px !important;
+    margin-left: -2px !important;
     margin-top: 15px;
     height: 34px;
     border-left: .5px solid black !important;
@@ -318,8 +281,32 @@ color: white !important;
     transition: transform 0.5s;
     text-align: center;
     font-size: 13px;
-background-color: #171717 !important;
-color: white !important;
+    background-color: white;
+    color:black;
     cursor: crosshair;
     
+}
+#dpa:hover{
+    transition: transform 0.5s;
+    clip-path: inset(-30px -30px -30px 4px ) !important ;
+    border-left: .5px solid black !important;
+}
+#dpp:hover{
+    transition: transform 0.5s;
+    clip-path: inset(-30px  3px -30px -30px ) !important ;
+    border-right: .5px solid black !important;
+}
+
+#grashakey {
+    margin-left: 15px !important ;
+    box-shadow: 0 0px 12px 4px rgba(208, 18, 255, 0.39), 0 6px 20px 0 rgba(0, 174, 255, 0.445) !important;
+}
+#grasharev {margin-left: 15px !important;
+    box-shadow: 0 0px 12px 4px rgba(255, 0, 0, 0.39), 0 6px 20px 0 rgba(17, 0, 255, 0.486) !important;
+}
+#grashacred {margin-left: 15px !important;
+    box-shadow: 0 0px 12px 4px rgba(26, 255, 18, 0.39), 0 6px 20px 0 rgba(0, 47, 255, 0.445) !important;
+}
+#grashaupd {
+    box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(0, 255, 21, 0.445) !important;
 }
