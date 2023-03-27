@@ -293,7 +293,7 @@ a {
 }
 #dpp:hover{
     transition: transform 0.5s;
-    clip-path: inset(-30px  3px -30px -30px ) !important ;
+    clip-path: inset(30px 30px 30px -4px ) !important ;
     border-right: .5px solid black !important;
 }
 
