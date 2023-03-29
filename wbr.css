@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
  .banner {
      margin: 0px;
@@ -219,7 +219,7 @@
      color:rgb(255, 255, 255);
 }
  h1,h2,h3 {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Righteous', cursive;
 }
  .word1 {
      color:rgb(255, 255, 255);
@@ -243,7 +243,7 @@
     color: rgb(0, 103, 205);
 }
  p{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Righteous', cursive;
 }
  .shadow{
      transition: 0.5s;
@@ -367,7 +367,7 @@
      box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(0, 255, 21, 0.445) !important;
 }
 
-#main {
+#main {font-family: 'Righteous', cursive;
     color: azure;
 }
 
