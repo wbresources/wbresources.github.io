@@ -104,7 +104,7 @@
          <h2 id="main">
             <span class="okok">Error, please reload page</span>
          </h2>
-         <button id="copybtn" style="width: 150px; background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); "class="homebtn" onclick="copytxt();">Copy label</button>
+         <button id="copybtn" class="homebtn" onclick="copytxt();">Copy label</button>
          <br>
          <br>
       </div>
@@ -164,7 +164,7 @@
          var grade = " -##"
          //var date = document.getElementById('mydate').value;
          var date = today;
-         var txt = work + grade + document.getElementById('geninput').value + " " + sub + " " + date;
+         var txt = work + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
          
          function normalgrade() {
             grade = " G" + document.getElementById('gradeinput').value
@@ -201,7 +201,7 @@
             if (sub === "DP(P)" || sub === "DP(A)" || sub === "DP") {
                txt = sub + grade + document.getElementById('geninput').value + " FOR " + date;
             } else {
-               txt = work + grade + document.getElementById('geninput').value + " " + sub + " " + date;
+               txt = work + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
             }
             if (setdate === "today") {
                date = today;
