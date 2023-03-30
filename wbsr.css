@@ -511,3 +511,7 @@
 .btns:active {
    transform: scale(1.29);
 }
+
+p {font-family: Helvetica}
+h2, h3, h4, h5, h5 {font-family: Helvetica}
+ 
