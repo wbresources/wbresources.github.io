@@ -84,7 +84,7 @@ h1,h2,h3,h4,h5,h6 {
    font-family: 'Righteous', cursive;
 }
 
-p, ul {font-family: sans-serif !important}
+p, ul {font-family: helvetica, sans-serif;}
 .word1 {
     color:rgb(255, 255, 255);
     transition: 0.5s;
