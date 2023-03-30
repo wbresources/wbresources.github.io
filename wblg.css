@@ -60,7 +60,7 @@
      background-color: rgb(25,25,25);
      color:rgb(255, 255, 255);}
  #copybtn {
-    box-shadow: 0 0px 12px 4px rgba(255, 85, 0, 0.39), 0 6px 20px 0 rgba(255, 196, 0, 0.445), 0 6px 20px 0 rgba(255, 247, 0, 0.192) !important;
+    box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(255, 174, 0, 0.445) !important;
      background-color:rgb(254, 123, 0) ;
      width:120px;
      color: white;
@@ -108,9 +108,9 @@
      text-align: center;
      font-size: 13px;
      background-color: rgb(25,25,25);
-     color:rgb(255, 255, 255);
+     
      cursor: crosshair;
-     width: 60px;
+     width: 80px;
      clip-path: inset(-30px -30px -30px -0px);
      border-top-right-radius: 100px !important;
      border-bottom-right-radius: 100px !important;
@@ -126,7 +126,7 @@
      text-align: center;
      font-size: 13px;
      background-color: rgb(25,25,25);
-     color:rgb(255, 255, 255);
+     
      cursor: crosshair;
 }
  #geninput:hover {
@@ -134,17 +134,17 @@
     transition: 0.5s;
     transform: scale(1.05);
      background-color: rgb(25,25,25);
-     color:rgb(255, 255, 255);
+    
 }
  #geninput:active {
     clip-path: inset(-30px -30px -30px 1px ) !important ;
     transition: 0.5s;
     transform: scale(1.05);
      background-color: rgb(25,25,25);
-     color:rgb(255, 255, 255);
+     
 }
  #gradeinput {
-     width: 55px;
+     width: 80px;
      box-shadow: 0 0px 12px 4px rgba(92, 92, 92, 0.527), 0 6px 20px 0 rgba(92, 92, 92, 0.445);
      
      margin: 5px;
@@ -189,6 +189,34 @@
     transform: scale(1.05);
      background-color: rgb(25,25,25);
      color:rgb(255, 255, 255);
+}
+#levelinput {
+    clip-path: inset(-30px -0px -30px -0px);
+    width: 80px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    margin-right: -2px !important;
+    margin-left: -2px !important;
+    margin-top: 5px;
+    height: 34px;
+    
+    border: solid rgb(46, 46, 46) 1px;
+    transition: 0.5s;
+    height: 31px;
+    text-align: center;
+    font-size: 13px;
+    background-color: rgb(25,25,25);
+    color:rgb(255, 255, 255);
+    cursor: crosshair;
+}
+
+#levelinput:hover {
+    clip-path: inset(-30px 1.5px -30px 1.5px ) !important ;
+}
+#levelinput:active {
+    clip-path: inset(-30px 1.5px -30px 1.5px ) !important ;
 }
 
 
@@ -355,6 +383,10 @@
      margin-left: 15px !important ;
      box-shadow: 0 0px 12px 4px rgba(208, 18, 255, 0.39), 0 6px 20px 0 rgba(0, 174, 255, 0.445) !important;
 }
+#grashahome {
+    margin-left: 15px !important ;
+    box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(255, 174, 0, 0.445) !important;
+}
  #grasharev {
     margin-left: 15px !important;
      box-shadow: 0 0px 12px 4px rgba(255, 0, 0, 0.39), 0 6px 20px 0 rgba(17, 0, 255, 0.486) !important;
@@ -479,4 +511,8 @@
 
 .qword {
     color: rgb(254, 123, 0) ;
+}
+
+#hidden {
+    color: grey;
 }
