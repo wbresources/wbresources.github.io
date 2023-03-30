@@ -11,11 +11,24 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
       <link rel="icon" type="image/png" href="images/favicon.png">
-      
+      <style>
+         select:required:invalid {
+           color: #6d6d6d;
+         }
+         option[value=""][disabled] {
+           display: none;
+         }
+         option {
+           color: #000;
+         }
+       </style>
    </head>
    <body onclick="update();" style="vertical-align: middle;">
-
-
+      <p style= "position: fixed; text-align: left;">
+         <a href="index.html" >
+            <button class="homebtn" id="grashahome" style="background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); color: white"> Back Home «</button>
+            </a>
+      </p>
       <div class="heading">
          <img class="logo" src="images/logo.png" alt="logo" style="width: 110px; vertical-align: middle;">
          <h2 style="display: inline-block; vertical-align: middle;">
@@ -28,37 +41,33 @@
             <u>G</u>enarator</span>
          </h2>
       </div>
+
+     
       <br>
       <div>
-         
-            <h2 class="qword">Type:</h2>
-            <a href="#duedateselect"></a>
-            <div    id="HWCWselect">
-         <button style="width: 100px;"  class="homebtn" onclick="worksel('CW');">CW</button>
-         <button style="width: 100px;" class="homebtn" onclick="worksel('HW');">HW</button><br>
-         <button style="width: 100px;" class="homebtn" onclick="subsel('DP');">DP</button>
-         <button style="width: 50px;" class="homebtn" id="dpp" onclick="subsel('DP(P)');">DP(P)</button>
-         <button style="width: 50px;" class="homebtn" id="dpa" onclick="subsel('DP(A)');">DP(A)</button>
-            
-         </div> 
-         
-       
+         <h2 class="qword">Type:</h2>
+         <a href="#duedateselect"></a>
+         <div    id="HWCWselect">
+            <button style="width: 100px;"  class="homebtn" onclick="worksel('CW');">CW</button>
+            <button style="width: 100px;" class="homebtn" onclick="worksel('HW');">HW</button><br>
+            <button style="width: 100px;" class="homebtn" onclick="subsel('DP');">DP</button>
+            <button style="width: 50px;" class="homebtn" id="dpp" onclick="subsel('DP(P)');">DP(P)</button>
+            <button style="width: 50px;" class="homebtn" id="dpa" onclick="subsel('DP(A)');">DP(A)</button>
+         </div>
          <div   >
             <h2 class="qword">Grade:</h2>
-            <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="10" placeholder="#" id="gradeinput" onclick="normalgrade()"class="homebtn" >
-          
-            <select name="Genders" id="geninput" class="homebtn">
-               <option value="B">Boys</option>
-               <option value="G">Girls</option>
-            </select><nobr>  <p style="color:white;" >Or if required, select by level:</p> <nobr> </p><button id="l1" style="width: 75px;" onclick="lv0();" class="homebtn" >Level 0</button>
-            <button id="l2"  style="width: 50px;" onclick="lv1();" class="homebtn" >1</button>
-            <button id="l3"  style="width: 50px;" onclick="lv2();" class="homebtn" >2</button>
-            <button id="l4"  style="width: 50px;" onclick="lv3();" class="homebtn" >3</button>
-
-            <!--button id="l1" style="width: 75px;" onclick="lv0();" class="homebtn" >Level 0</button>
-            <button id="l2"  style="width: 75px;" onclick="lv1();" class="homebtn" >Level 1</button>
-            <button id="l3"  style="width: 75px;" onclick="lv2();" class="homebtn" >Level 2</button>
-            <button id="l4"  style="width: 75px;" onclick="lv3();" class="homebtn" >Level 3</button -->
+            <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="" placeholder="Grade" id="gradeinput" onclick="normalgrade()"class="homebtn" >
+            <input type="number" inputmode="numeric" pattern="[0-9]*" min="0" max="3" value="" placeholder="Lvl(if rqd.)" id="levelinput" onclick="levelgrade()"class="homebtn" >
+           
+            <select placeholder="Gender" name="Genders" id="geninput" class="homebtn" required>
+            <option value="" disabled selected hidden>Gender</option>
+            <option value="B">Boys</option>
+            <option value="G">Girls</option>
+            </select>
+            <!-- button id="l1" style="width: 75px;" onclick="lv0();" class="homebtn" >Level 0</button>
+               <button id="l2"  style="width: 75px;" onclick="lv1();" class="homebtn" >Level 1</button>
+               <button id="l3"  style="width: 75px;" onclick="lv2();" class="homebtn" >Level 2</button>
+               <button id="l4"  style="width: 75px;" onclick="lv3();" class="homebtn" >Level 3</button -->
          </div>
          <br>
          <div   >
@@ -79,7 +88,6 @@
             </a>
             <br>
          </div>
-
          <div    id="duedateselect">
             <h2 class="qword">Due date:</h2>
             <!--p style="color: rgb(180, 180, 180);">(set to today's date by default)</p -->
@@ -93,39 +101,36 @@
       <br>
       <br>
       <div    style="background-color: rgba(255, 119, 0, 0.119); border-radius:100px; padding:5px;">
-        
          <h2 id="main">
             <span class="okok">Error, please reload page</span>
          </h2>
-         <button id="copybtn" style="width: 150px" class="homebtn" onclick="copytxt();">Copy label</button>
-          <br>
-      <br>
-     
+         <button id="copybtn" style="width: 150px; background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); "class="homebtn" onclick="copytxt();">Copy label</button>
+         <br>
+         <br>
       </div>
       <br>
-      
-   
       <br>
-  
       <footer>
          <br>
+         <a href="index.html">
+         <button class="homebtn" id="grashahome" style="background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); color: white"> Back Home «</button>
+         </a>
          <a href="keyboardshortcuts.html">
-      <button class="homebtn" id="grashakey" style="background-image: linear-gradient(-45deg, rgb(0, 200, 200) 0%, rgb(200, 0, 200) 100%); color: white"> Keyboard Shortcuts </button>
-      </a>
-      <a href="review.html">
-      <button class="homebtn" id="grasharev" style="background-image: linear-gradient(-45deg, rgb(255, 0, 0) 0%, rgb(0, 0, 255) 100%); color: white"> Give Feedback </button>
-      </a>
-      <a href="credits.html">
-      <button class="homebtn" id="grashacred" style="background-image: linear-gradient(-45deg, rgb(0, 0, 255) 0%, rgb(0, 255, 0) 100%); color: white"> See credits </button>
-      </a>
-      <a href="updates.html">
-      <button class="homebtn" id="grashaupd" style="background-image: linear-gradient(-45deg, rgb(0, 255, 0) 0%, rgb(255, 0, 0) 100%); color: white"> See all updates </button>
-      </a>
-      <br>
-      <br>
+            <button class="homebtn" id="grashakey" style="background-image: linear-gradient(-45deg, rgb(0, 200, 200) 0%, rgb(200, 0, 200) 100%); color: white"> Keyboard Shortcuts </button>
+            </a>
+         <a href="review.html">
+         <button class="homebtn" id="grasharev" style="background-image: linear-gradient(-45deg, rgb(255, 0, 0) 0%, rgb(0, 0, 255) 100%); color: white"> Give Feedback </button>
+         </a>
+         <a href="credits.html">
+         <button class="homebtn" id="grashacred" style="background-image: linear-gradient(-45deg, rgb(0, 0, 255) 0%, rgb(0, 255, 0) 100%); color: white"> See credits </button>
+         </a>
+         <a href="updates.html">
+         <button class="homebtn" id="grashaupd" style="background-image: linear-gradient(-45deg, rgb(0, 255, 0) 0%, rgb(255, 0, 0) 100%); color: white"> See all updates </button>
+         </a>
+         <br>
+         <br>
          <p>WB Label Generator Version 1.3.1</p>
          <p>By Umar Habib - WBResources</p>
-         
          <br>
       </footer>
       <script src="confetti.js"></script>
@@ -135,7 +140,7 @@
          const start = () => {
             setTimeout(function() {
                confetti.start()
-            }, 500); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+            }, 20); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
          };
          //  for stopping the confetti 
          const stop = () => {
@@ -153,33 +158,38 @@
             date = today;
             update();
          }
-         today = dd + '-' + mm + '-' + yyyy;
-         var sub = "MAT";
-         var work = "CW";
-         var grade = document.getElementById('gradeinput').value;
+         today = dd + '-' + mm + '-' + yyyy
+         var sub = "---";
+         var work = "--";
+         var grade = " -##"
          //var date = document.getElementById('mydate').value;
          var date = today;
-         var txt = work + " G" + grade + document.getElementById('geninput').value + " " + sub + " " + date;
+         var txt = work + grade + document.getElementById('geninput').value + " " + sub + " " + date;
          
          function normalgrade() {
-            grade = document.getElementById('gradeinput').value
+            grade = " G" + document.getElementById('gradeinput').value
          }
+         function levelgrade() {
+            grade = " LV" + document.getElementById('levelinput').value
+         }
+
          
-         function lv0() {
-            grade = "LV0"
-         };
          
-         function lv1() {
-            grade = "LV1"
-         };
+         //function lv0() {
+         //     grade = "LV0"
+         //  };
          
-         function lv2() {
-            grade = "LV2"
-         };
+         //  function lv1() {
+         //    grade = "LV1"
+         //   };
          
-         function lv3() {
-            grade = "LV3";
-         };
+         //   function lv2() {
+         //     grade = "LV2"
+         //  };
+         
+         //  function lv3() {
+         //     grade = "LV3";
+         //  };
          var tomorrow = new Date();
          tomorrow.setDate(tomorrow.getDate() + 1);
          var dd1 = String(tomorrow.getDate()).padStart(2, '0');
@@ -189,9 +199,9 @@
          
          function update() {
             if (sub === "DP(P)" || sub === "DP(A)" || sub === "DP") {
-               txt = sub + " G" + grade + document.getElementById('geninput').value + " FOR " + date;
+               txt = sub + grade + document.getElementById('geninput').value + " FOR " + date;
             } else {
-               txt = work + " G" + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
+               txt = work + grade + document.getElementById('geninput').value + " " + sub + " " + date;
             }
             if (setdate === "today") {
                date = today;
@@ -199,7 +209,7 @@
                date = tomorrow1;
             } else if (setdate === "custom") {
                if (document.getElementById('mydate').value === "") {
-                  date = "INPUT DATE";
+                  date = "##-##-####";
                } else {
                   date1 = document.getElementById('mydate').value
                   const date2 = date1.split("-");
@@ -344,7 +354,7 @@
                homebtns[i].style.boxShadow = "0 0px 20px 0  gray";
             }
          }
-      </script>
+         </script>
          <script>
          //Here is your WB theme
          function wbtheme() {
@@ -365,7 +375,7 @@
                homebtns[i].style.boxShadow = "0 0px 20px 0  white";
                }
          }-->
-         <script>
+      <script>
          addEventListener('keypress', (event) => {});
          onkeypress = (event) => {
             if (event.key === "Enter") {
