@@ -11,17 +11,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
       <link rel="icon" type="image/png" href="images/favicon.png">
-      <style>
-         select:required:invalid {
-           color: #6d6d6d!mportant;
-         }
-         option[value=""][disabled] {
-           display: none!mportant;
-         }
-         option {
-           color: #000000 !mportant;
-         }
-       </style>
+ 
    </head>
    <body onclick="update();" style="vertical-align: middle;">
       <p style= "position: fixed; text-align: left;">
@@ -56,11 +46,11 @@
          </div>
          <div   >
             <h2 class="qword">Grade:</h2>
-            <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="" placeholder="Grade" id="gradeinput" onclick="normalgrade()"class="homebtn" >
+            <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="10" placeholder="Grade" id="gradeinput" onclick="normalgrade()"class="homebtn" >
             <input type="number" inputmode="numeric" pattern="[0-9]*" min="0" max="3" value="" placeholder="Lvl(if rqd.)" id="levelinput" onclick="levelgrade()"class="homebtn" >
            
             <select placeholder="Gender" name="Genders" id="geninput" class="homebtn" required>
-            <option value="" disabled selected hidden>Gender</option>
+            
             <option value="B">Boys</option>
             <option value="G">Girls</option>
             </select>
@@ -157,9 +147,9 @@
             update();
          }
          today = dd + '-' + mm + '-' + yyyy
-         var sub = "MAT";
-         var work = "HW";
-         var grade = " G10B"
+         var sub = "---";
+         var work = "--";
+         var grade = " G" + document.getElementById('gradeinput').value + document.getElementById('geninput').value"
          //var date = document.getElementById('mydate').value;
          var date = today;
          var txt = work + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
