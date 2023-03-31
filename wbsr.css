@@ -1,165 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 .banner {
-    margin: 0px;
     background-color: rgb(0, 153, 255);
     color: white;
+    margin: 0px;
+    padding: 10px;
     position: sticky;
-    text-align:center;
-    padding: 10px;
-}
-::selection {
-    background:rgb(254, 123, 0) 
-}
-html {
+    text-align: center;
+  }
+  
+  ::selection {
+    background: rgb(254, 123, 0);
+  }
+  
+  html {
     scroll-behavior: smooth;
-}
-body {color: white;
-    background-size: cover;
-    padding: 10px;
-    text-align: left !important;
+  }
+  
+  body {
     background-color: rgb(38, 38, 38);
     background-repeat: no-repeat;
-    cursor:crosshair;
+    background-size: cover;
+    color: white;
+    cursor: crosshair;
     font-size: large;
-}
-.classname {
-    animation-name: example;
+    padding: 10px;
+    text-align: left !important;
+  }
+  
+  .classname {
     animation-duration: 5s;
-}
-footer {
-   border-top: 1px solid rgb(115, 115, 115);
+    animation-name: example;
+  }
+  
+  footer {
+    border-top: 1px solid rgb(115, 115, 115);
     color: rgb(90, 90, 90);
+    font-family: 'Ubuntu', sans-serif;
     height: 200px;
     margin: 0%;
-    font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     text-align: center;
-    
-}
-.homebtn {
-    box-shadow: 0 0px 12px 4px rgba(92, 92, 92, 0.527), 0 6px 20px 0 rgba(92, 92, 92, 0.445);
+  }
+  
+  .homebtn {
+    background-color: rgb(25, 25, 25);
+    border: solid rgb(46, 46, 46) 1px;
     border-radius: 100px;
+    box-shadow: 0 0px 12px 4px rgba(92, 92, 92, 0.527), 0 6px 20px 0 rgba(92, 92, 92, 0.445);
+    color: rgb(255, 255, 255);
+    cursor: crosshair;
+    font-size: 13px;
+    height: 34px;
     margin: 8px;
     margin-top: 15px;
-    height: 34px;
-    border: solid rgb(46, 46, 46) 1px;
-    transition:  0.5s;
     text-align: center;
-    font-size: 13px;
-    background-color: rgb(25,25,25);
-    color:rgb(255, 255, 255);
-    cursor: crosshair;
-}
-.homebtn:hover {
-     transform: scale(1.05);
-    background-color: rgb(25,25,25);
-    color:rgb(255, 255, 255);
-}
-.homebtn:active {
+    transition: 0.5s;
+  }
+  
+  .homebtn:hover,
+  .homebtn:active {
+    background-color: rgb(25, 25, 25);
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
-    background-color: rgb(25,25,25);
-    color:rgb(255, 255, 255);}
-#copybtn {
-   box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(255, 174, 0, 0.445) !important;
-   width: 150px; 
-   background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); 
+  }
+  
+  #copybtn {
+    background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%);
+    border-radius: 100px;
+    box-shadow: 0 0px 12px 4px rgba(255, 18, 18, 0.39), 0 6px 20px 0 rgba(255, 174, 0, 0.445) !important;
     color: white;
     transition: 0.5s;
-    border-radius: 100px;
-}
-
-.heading {
-    text-align: center;
-    color: rgb(0, 0, 0);
+    width: 150px;
+  }
+  
+  .heading {
     border-bottom: 1px solid rgb(115, 115, 115);
+    color: rgb(0, 0, 0);
     font-size: 25px;
     padding: 10px;
-}
+    text-align: center;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Righteous', cursive;
+  }
+  
+  p,
+  ul {
+    font-family: sans-serif !important;
+  }
 
-
-
-
-h1,h2,h3,h4,h5,h6 {
-   font-family: 'Righteous', cursive;
-}
-
-p, ul {font-family: helvetica, sans-serif;}
-.word1 {
-    color:rgb(255, 255, 255);
+  strong {
+    font-family: 'Righteous', cursive;
+  }
+  
+  .word1,
+  .word2,
+  .word3 {
+    color: rgb(255, 255, 255);
     transition: 0.5s;
-}
-.word1:hover {
-   color: rgb(205, 0, 0);
-}
-.word2 {
-   color:rgb(255, 255, 255);
-    transition: 0.5s;
-}
-.word2:hover {
-   color: rgb(37, 180, 1);
-}
-.word3 {
-   color:rgb(255, 255, 255);
-    transition: 0.5s;
-}
-.word3:hover {
-   color: rgb(0, 103, 205);
-}
-p{
-   font-family: 'Righteous', cursive;
-}
-.shadow{
-    transition: 0.5s;
-    border-radius: 40px;
-}
-.logo {
-    margin: 10px;
-}
-.oldup {
-    color: gray;
-    font-family: 'Courier New', Courier, monospace;
-}
-.hide {
-    text-align: left;
-    display: none;
-    transition: 5s;
-    color: gray;
-    font-family: 'Courier New', Courier, monospace;
-}
-.hoverhere:hover + .hide{
-    text-align: left;
-    display: block;
-    color: gray;
-    font-family: 'Courier New', Courier, monospace;
-    transition: 5s;
-}
-.hoverhere {
-    text-align: left;
-    text-decoration: none;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    transition: 5s;
-}
-.newup {
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-}
-.backhome {
-    background-color: rgb(254, 123, 0);
-    color: black;
-    padding: 10px 15px;
-    border-radius: 100px;
-    text-decoration: none;
-    margin: 30px;
-    font-family: sans-serif;
-}
-.alert {
-    background-color: rgba(255, 123, 0, 0.678);
-    font-size: 20px;
-    border-radius: 100px;
-    padding: 10px 20px;
-}
-a {
-    text-decoration: none;
-}
+  }
+  
+  .word1:hover {
+    color: rgb(205, 0, 0);
+  }
+  
+  .word2:hover {
+    color: rgb(37, 180, 1);
+  }
+  
+  .word3:hover {
+    color: rgb(0, 103, 205);
+  }
+  
