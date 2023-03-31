@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>WB Label Generator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Umar">
+      <link rel="stylesheet" href="wblg.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+      <link rel="icon" type="image/png" href="images/favicon.png">
+      <style>
+         select:required:invalid {
+           color: #6d6d6d;
+         }
+         option[value=""][disabled] {
+           display: none;
+         }
+         option {
+           color: #000000;
+         }
+       </style>
+   </head>
+   <body onclick="update();" style="vertical-align: middle;">
+      <p style= "position: fixed; text-align: left;">
+         <a href="index.html" >
+            <button class="homebtn" id="grashahome" style="background-image: linear-gradient(-45deg, rgb(200, 47, 0) 0%, rgb(200, 120, 0) 100%); color: white"> Back  «</button>
+            </a>
+      </p>
+      <div class="heading">
+         <img class="logo" src="images/logo.png" alt="logo" style="width: 110px; vertical-align: middle;">
+         <h2 style="display: inline-block; vertical-align: middle;">
+            <span class="word1">
+            <u>WB</u>
+            </span>
+            <span class="word2">
+            <u>L</u>abel </span>
+            <span class="word3">
+            <u>G</u>enarator</span>
+         </h2>
+      </div>
+
+     
+      <br>
+      <div>
+         <h2 class="qword">Type:</h2>
+         <a href="#duedateselect"></a>
+         <div    id="HWCWselect">
+            <button style="width: 100px;"  class="homebtn" onclick="worksel('CW');">CW</button>
+            <button style="width: 100px;" class="homebtn" onclick="worksel('HW');">HW</button><br>
+            <button style="width: 100px;" class="homebtn" onclick="subsel('DP');">DP</button>
+            <button style="width: 50px;" class="homebtn" id="dpp" onclick="subsel('DP(P)');">DP(P)</button>
+            <button style="width: 50px;" class="homebtn" id="dpa" onclick="subsel('DP(A)');">DP(A)</button>
+         </div>
+         <div   >
+            <h2 class="qword">Grade:</h2>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" min="1" max="12" value="" placeholder="Grade" id="gradeinput" onclick="normalgrade()"class="homebtn" >
+            <input type="number" inputmode="numeric" pattern="[0-9]*" min="0" max="3" value="" placeholder="Lvl(if rqd.)" id="levelinput" onclick="levelgrade()"class="homebtn" >
+           
+            <select placeholder="Gender" name="Genders" id="geninput" class="homebtn" required>
+            <option value="" disabled selected hidden>Gender</option>
+            <option value="B">Boys</option>
+            <option value="G">Girls</option>
+            </select>
+            <!-- button id="l1" style="width: 75px;" onclick="lv0();" class="homebtn" >Level 0</button>
+               <button id="l2"  style="width: 75px;" onclick="lv1();" class="homebtn" >Level 1</button>
+               <button id="l3"  style="width: 75px;" onclick="lv2();" class="homebtn" >Level 2</button>
+               <button id="l4"  style="width: 75px;" onclick="lv3();" class="homebtn" >Level 3</button -->
+         </div>
+         <br>
+         <div   >
+            <h2 class="qword">Subject:</h2>
+            <a href="#HWCWselect">
+            <button style="width: 85px;" class="homebtn" onclick="subsel('MAT');">Math</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('ENG');">English</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('SCI');">Science</button>
+            <br>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('BIO');">Biology</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('CHE');">Chemistry</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('PHY');">Physics</button>
+            <br>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('ARA');">Arabic</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('ICT');">ICT</button>
+            <button style="width: 85px;" class="homebtn" onclick="subsel('ISL');">Islamic</button>
+            <br>
+            </a>
+            <br>
+         </div>
+         <div    id="duedateselect">
+            <h2 class="qword">Due date:</h2>
+            <!--p style="color: rgb(180, 180, 180);">(set to today's date by default)</p -->
+            <button class="homebtn" style="width: 85px;" onclick="setdate='today'">Today</button>
+            <button class="homebtn" style="width: 85px;" onclick="setdate='tomorrow';">Tomorrow</button>
+            <input type="date" id="mydate" placeholder="custom" onclick="setdate='custom';" class="homebtn" >
+            <br>
+         </div>
+         <br>
+      </div>
+      <br>
+      <br>
+      <div    style="background-color: rgba(255, 119, 0, 0.119); border-radius:100px; padding:5px;">
+         <h2 id="main">
+            <span class="okok">Error, please reload page</span>
+         </h2>
+         <button id="copybtn" class="homebtn" onclick="copytxt();">Copy label</button>
+         <br>
+         <br>
+      </div>
+      <br>
+      <br>
+      <footer>
+         <br>
+        
+         <a href="keyboardshortcuts.html">
+            <button class="homebtn" id="grashakey" style="background-image: linear-gradient(-45deg, rgb(0, 200, 200) 0%, rgb(200, 0, 200) 100%); color: white"> Keyboard Shortcuts </button>
+            </a>
+         <a href="review.html">
+         <button class="homebtn" id="grasharev" style="background-image: linear-gradient(-45deg, rgb(255, 0, 0) 0%, rgb(0, 0, 255) 100%); color: white"> Give Feedback </button>
+         </a>
+         <a href="credits.html">
+         <button class="homebtn" id="grashacred" style="background-image: linear-gradient(-45deg, rgb(0, 0, 255) 0%, rgb(0, 255, 0) 100%); color: white"> See credits </button>
+         </a>
+         <a href="updates.html">
+         <button class="homebtn" id="grashaupd" style="background-image: linear-gradient(-45deg, rgb(0, 255, 0) 0%, rgb(255, 0, 0) 100%); color: white"> See all updates </button>
+         </a>
+         <br>
+         <br>
+         <p>WB Label Generator Version 1.3.1</p>
+         <p>By Umar Habib - styleesources</p>
+         <br>
+      </footer>
+      <script src="confetti.js"></script>
+      <script>
+         var setdate = "";
+         //JS for the confetti, ignore this.
+         const start = () => {
+            setTimeout(function() {
+               confetti.start()
+            }, 20); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+         };
+         //  for stopping the confetti 
+         const stop = () => {
+            setTimeout(function() {
+               confetti.stop()
+            }, 2000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+         };
+         var today = new Date();
+         var dd = String(today.getDate()).padStart(2, '0');
+         var mm = String(today.getMonth() + 1).padStart(2, '0');
+         var yyyy = today.getFullYear();
+         var date1;
+         
+         function todaydate() {
+            date = today;
+            update();
+         }
+         today = dd + '-' + mm + '-' + yyyy
+         var sub = "MAT";
+         var work = "HW";
+         var grade = " G10B"
+         //var date = document.getElementById('mydate').value;
+         var date = today;
+         var txt = work + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
+         
+         function normalgrade() {
+            grade = " G" + document.getElementById('gradeinput').value
+         }
+         function levelgrade() {
+            grade = " LV" + document.getElementById('levelinput').value
+         }
+
+         
+         
+         //function lv0() {
+         //     grade = "LV0"
+         //  };
+         
+         //  function lv1() {
+         //    grade = "LV1"
+         //   };
+         
+         //   function lv2() {
+         //     grade = "LV2"
+         //  };
+         
+         //  function lv3() {
+         //     grade = "LV3";
+         //  };
+         var tomorrow = new Date();
+         tomorrow.setDate(tomorrow.getDate() + 1);
+         var dd1 = String(tomorrow.getDate()).padStart(2, '0');
+         var mm1 = String(tomorrow.getMonth() + 1).padStart(2, '0');
+         var yyyy1 = tomorrow.getFullYear();
+         tomorrow1 = dd1 + '-' + mm1 + '-' + yyyy1;
+         
+         function update() {
+            if (sub === "DP(P)" || sub === "DP(A)" || sub === "DP") {
+               txt = sub + grade + document.getElementById('geninput').value + " FOR " + date;
+            } else {
+               txt = work + grade + document.getElementById('geninput').value + " " + sub + " DUE " + date;
+            }
+            if (setdate === "today") {
+               date = today;
+            } else if (setdate === "tomorrow") {
+               date = tomorrow1;
+            } else if (setdate === "custom") {
+               if (document.getElementById('mydate').value === "") {
+                  date = "##-##-####";
+               } else {
+                  date1 = document.getElementById('mydate').value
+                  const date2 = date1.split("-");
+                  date = date2[2] + "-" + date2[1] + "-" + date2[0];
+               }
+            }
+            document.getElementById('main').innerHTML = txt;
+         };
+         
+         function subsel(subselect) {
+            sub = subselect;
+            update();
+         }
+         
+         function worksel(workselect) {
+            work = workselect;
+            update();
+         }
+         
+         function copytxt() {
+            update();
+            update();
+            update();
+            update();
+            navigator.clipboard.writeText(txt);
+            fetch('https://api.countapi.xyz/update/submityourwork/syw/?amount=1').then(res => res.json()).then(res => {
+               countEl.innerHTML = res.value;
+            });
+            start();
+            stop();
+            document.body.className = 'classname';
+            if (sub === "DP(P)" && date === today) {
+               alert("Are you sure that the date is correct? \n \nIf the planner is *planned* for tomorrow, then the due date would be tomorrow's date. \nFor example if you submit a planner on 13 Oct for the day after, the due date would be 14 Oct. \n\nText has been copied anyways.");
+            }
+         }
+         update();
+         var intervalId = window.setInterval(function() {
+            update();
+         }, 50);
+         document.getElementById("formsdiv").style.display = "none";
+         
+         function myFunction() {
+            document.getElementById("formsdiv").style.display = "block";
+         }
+      </script>
+      <script>
+         //Shows how many times the button has been clicked -- DON'T MESS WITH THIS
+         const countEl = document.getElementById('count');
+         
+         function updateVisitCount() {
+            fetch('https://api.countapi.xyz/get/submityourwork/syw').then(res => res.json()).then(res => {
+               countEl.innerHTML = res.value;
+            });
+         }
+         updateVisitCount();
+      </script>
+      <!-- <script> //All the theme stuff here, you may do what you want with it:
+         var h2Elements = document.getElementsByTagName("h2");
+         var pElements = document.getElementsByTagName("p");
+         var spanElements = document.getElementsByTagName("span");
+         var homebtns = document.getElementsByClassName("homebtn");
+         
+         function lighttheme() {
+            document.body.style.background = "rgb(240, 240, 240)";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "black";
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "black";
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "black";
+            }
+            for (var i = 0; i < homebtns.length; i++) {
+               homebtns[i].style.boxShadow = "0 0px 20px 0  gray";
+               }
+         }
+         
+         function darktheme() {
+            document.body.style.background = "rgb(0, 0, 0)";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "white";
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "white";
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "white";
+            }
+         }
+         
+         function spacetheme() {
+            document.body.style.background = "url('https://wallpapershome.com/images/pages/pic_h/2631.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "white";
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "white";
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "white";
+            }
+             for (var i = 0; i < homebtns.length; i++) {
+               homebtns[i].style.boxShadow = "0 0px 20px 0  blue";
+            }
+         }
+         
+         function pinktheme() {
+            document.body.style.background = "url('https://wallpapershome.com/images/pages/pic_h/23723.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "rgb(0, 0, 0)";
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "rgb(0, 0, 0)";
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "rgb(0, 0, 0)";
+            }
+             for (var i = 0; i < homebtns.length; i++) {
+               homebtns[i].style.boxShadow = "0 0px 20px 0   lightpink";
+            }
+         }
+         
+         function cartheme() {
+            document.body.style.background = "url('https://wallpaperaccess.com/full/48832.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "black";
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "black";
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "black";
+            }
+            for (var i = 0; i < homebtns.length; i++) {
+               homebtns[i].style.boxShadow = "0 0px 20px 0  gray";
+            }
+         }
+         </script>
+         <script>
+         //Here is your WB theme
+         function wbtheme() {
+            //Put background image link into: url('LINK HERE') :
+            document.body.style.background = "rgb(0, 0, 0)";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "cover";
+            for (var i = 0; i < h2Elements.length; i++) {
+               h2Elements[i].style.color = "rgb(254, 123, 0)"; //Title color
+            }
+            for (var i = 0; i < pElements.length; i++) {
+               pElements[i].style.color = "white"; //Normal text color
+            }
+            for (var i = 0; i < spanElements.length; i++) {
+               spanElements[i].style.color = "white"; //Span color, better set it as the same color as the text color
+            }
+            for (var i = 0; i < homebtns.length; i++) {
+               homebtns[i].style.boxShadow = "0 0px 20px 0  white";
+               }
+         }-->
+      <script>
+         addEventListener('keypress', (event) => {});
+         onkeypress = (event) => {
+            if (event.key === "Enter") {
+               copytxt();
+            } else if (event.key === "c" || event.key === "C") {
+               worksel('CW');
+               copytxt();
+            } else if (event.key === "h" || event.key === "H") {
+               worksel('HW');
+               copytxt();
+            } else if (event.key === "d" || event.key === "D") {
+               subsel('DP');
+               copytxt();
+            } else if (event.key === "w" || event.key === "W" || event.key === "2") {
+               lighttheme();
+            } else if (event.key === "b" || event.key === "B" || event.key === "1") {
+               wbtheme();
+            } else if (event.key === "p" || event.key === "P" || event.key === "4") {
+               pinktheme();
+            } else if (event.key === "r" || event.key === "R" || event.key === "3") {
+               spacetheme();
+            } else if (event.key === "c" || event.key === "C" || event.key === "5") {
+               cartheme();
+            }
+         };
+         
+      </script>
+   </body>
+</html>
