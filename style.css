@@ -160,7 +160,8 @@ footer{
     color:#000;
     border-bottom:1px solid #737373;
     font-size:25px;
-    padding:10px
+    padding:10px;
+    background-color:  #0000007b !important;
 }
 .okok{
     color:#000;
