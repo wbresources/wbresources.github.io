@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 #copybtn:active,#copybtn:hover{
     transform:scale(1.2) !important;
 }
@@ -32,7 +32,7 @@
     margin-left:15px!important
 }
 #main,h1,h2,h3,h4,h5,h6,p,strong{
-    font-family:Righteous,cursive
+    font-family: 'Chivo Mono', monospace;
 }
 #l2,#l3,#levelinput{
     clip-path:inset(-30px -0px -30px -0px);
@@ -130,7 +130,7 @@ footer{
     border-top:1px solid #737373;
     color:#5a5a5a;
     height:200px;
-    font-family:Ubuntu,sans-serif;
+    font-family: 'Chivo Mono', monospace;;
     text-align:center
 }
 .homebtn{
